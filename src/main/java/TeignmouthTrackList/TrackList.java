@@ -11,4 +11,12 @@ public class TrackList {
         this.songMap.put("Wild World", "Feel the wild world in the air, Leddy body's running down the sraight, Try it again, Please it again, Can't control my mind, Can't control my mind, Feel the wild world in the air, You must be very ill, When you be lackey, Feel the wild world");
         this.songMap.put("Fiorina", "My journey will not end, Something compells me, I travel through the darkness To be by your side");
     }
+
+    public String getSong(String title) {
+        if (songMap.containsKey(title)) {
+            return songMap.get(title);
+        }
+
+        return "Sorry, this song does not exists in this track list.";
+    }
 }

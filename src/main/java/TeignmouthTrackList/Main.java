@@ -2,6 +2,7 @@ package TeignmouthTrackList;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        TrackList trackList = new TrackList();
+        System.out.format("Song lyric : %s",trackList.getSong("Very Ill"));
     }
 }
