@@ -1,5 +1,6 @@
 package TeignmouthTrackList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class TrackList {
     private HashMap<String, String> songMap;
@@ -16,7 +17,12 @@ public class TrackList {
         if (songMap.containsKey(title)) {
             return songMap.get(title);
         }
-
         return "Sorry, this song does not exists in this track list.";
+    }
+
+    public void printAll() {
+        for (Map.Entry<String, String> entry : songMap.entrySet()) {
+            System.out.format("Key: %s, Value: %s\n", entry.getKey(), entry.getValue());
+        }
     }
 }
